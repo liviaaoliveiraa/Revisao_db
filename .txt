@@ -1,0 +1,11 @@
+se der o erro maldito bota:
+set DATABASE_URL=postgresql://postgres:amods@localhost:7777/comidasdb && npx prisma generate
+
+voce vai bota no .env:
+DATABASE_URL="postgresql://postgres:amods@localhost:7777/comidasdb"
+//aqui no final é o nome da data base que você quer tá burra 
+PORT=3000
+pra rodar é npm run studio
+no package.json no script bota 
+ "seed": "node prisma/seed.js"
+
