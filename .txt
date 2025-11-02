@@ -1,11 +1,74 @@
-se der o erro maldito bota:
-set DATABASE_URL=postgresql://postgres:amods@localhost:7777/comidasdb && npx prisma generate
+se der o erro maldito do data base no termina, bota:
+" set DATABASE_URL=postgresql://postgres:amods@localhost:7777/comidasdb && npx prisma generate "
+
+no caso,esse erro aqui: ""C:\Users\AlunoDS\Desktop\Comida" as a TypeScript/JavaScript module. Error: PrismaConfigEnvError: Missing required environment variable: DATABASE_URL"
 
 voce vai bota no .env:
-DATABASE_URL="postgresql://postgres:amods@localhost:7777/comidasdb"
+" DATABASE_URL="postgresql://postgres:amods@localhost:7777/comidasdb" "
 //aqui no final é o nome da data base que você quer tá burra 
-PORT=3000
-pra rodar é npm run studio
+
+a porta é :
+
+"PORT=3000" 
+
+pra rodar é:
+
+"npm run studio"
+
+no package.json no script bota 
+" "seed": "node prisma/seed.cjs" "
+
+-----------------------------------------------------------------------
+
+NÃO BAIXA O DOTENV,mas se não instala com o prisma pode instala ta
+
+instala um de cada vez
+
+Instalaçoes: 
+
+-npm i ...
+
+-nodemon
+-express
+-prisma
+-@prisma/client
+
+comandos:
+
+-roda npx prisma init --datasource-provider postgresql
+-npx prisma migrate dev --name init
+-npx prisma generate
+
+estrutura de pasta
+
+-copia do repositorio que você fez com o vitor
+
+primeiro faz o server
+
+
 no package.json no script bota 
  "seed": "node prisma/seed.js"
+
+ e fora vc coloca
+ "prisma": {
+    "seed": "node prisma/seed.cjs"
+     }
+
+e voce da o nomde do arquivo .cjs
+
+quando acaba de configura o seed roda:
+
+" npx prisma db seed "
+
+e para abrir o prisma studio é 
+
+" npx prisma studio "
+
+antes do seed roda
+
+npx prisma migrate dev --name init
+npx prisma generate
+
+NÃO ESQUECE DE INSTALAR O PRISMA NAS EXTENSÕES 
+
 
